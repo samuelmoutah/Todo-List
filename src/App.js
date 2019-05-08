@@ -3,7 +3,7 @@ import TodoItem from './TodoItem';
 import todosData from './todosData'
 
 function App() {
-  const todoComponents = todosData.map(function(item) {
+  const todoComponents = todosData.map(item => {
     return (
       <TodoItem key={item.id} todos={item} />
     )

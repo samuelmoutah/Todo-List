@@ -1,14 +1,12 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import TodoItem from './TodoItem';
+import todosData from './todosData'
 
 function App() {
+  const todoComponents = todosData.map(item => <TodoItem key={item.id} todos={item}/>)
   return(
     <div className="todo-list">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      {todoComponents}
     </div>
   )
 }
